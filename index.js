@@ -110,31 +110,46 @@ for(let i = 0; i<sayilar.length; i++){
   }
 }
 
-const uceTamBolunenler = [];
-sayilar.forEach(function(number){
-  if(number %3 === 0){
-    uceTamBolunenler.push(number);
-  }
-});
+
 
 
 
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler= [];
+sayilar.forEach(function(number){
+  if(number %3 === 0){
+    uceTamBolunenler.push(number);
+  }
+});
 
 // 3c çözümü:
+ucebolunenlerintoplami = sayilar.reduce(function(accumulator, currentValue) {
+  if (currentValue % 3 === 0) {
+      return accumulator + currentValue;
+  } else {
+      return accumulator;
+  }
+}, 0);
 
-/* kodlar buraya */
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter(number =>{
+  return number < 500 ;
+});
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = sayilar
+    .filter(number => {
+        return number < 500;
+    })
+    .sort((a, b) => {
+        return a - b;
+    });
+
 
 // 3f çözümü
 
