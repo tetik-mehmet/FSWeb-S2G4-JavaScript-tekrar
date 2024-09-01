@@ -110,6 +110,15 @@ for(let i = 0; i<sayilar.length; i++){
   }
 }
 
+const uceTamBolunenler = [];
+sayilar.forEach(function(number){
+  if(number %3 === 0){
+    uceTamBolunenler.push(number);
+  }
+});
+
+
+
 
 // 3b çözümü:
 
