@@ -152,8 +152,27 @@ siralisayilar = sayilar
 
 
 // 3f çözümü
+const tekrarSayilari = {};
+const tekrarEdenSayilar = [];
 
-/* kodlar buraya */
+sayilar.forEach((sayi) => {
+  
+  if (tekrarSayilari[sayi]) {
+    tekrarSayilari[sayi]++;
+  } else {
+    
+    tekrarSayilari[sayi] = 1;
+  }
+});
+
+for (const sayi in tekrarSayilari) {
+  if (tekrarSayilari[sayi] > 1) {
+    tekrarEdenSayilar.push(`${sayi} sayısı ${tekrarSayilari[sayi]} kere tekrar etmiştir.`);
+  }
+}
+
+
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
